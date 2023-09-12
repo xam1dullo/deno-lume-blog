@@ -1,0 +1,68 @@
+---
+layout: page.njk
+title: Khamidullo's Blog
+tags: index
+---
+
+<section class="mb-5">
+    <h1 class="mb-3">Hello, I'm Khamidullo</h1>
+    <img
+        src="/img/ninja.png"
+        width="150"
+        height="150"
+        title="Khamidullo's Avatar"
+        class="index-avatar float-end"
+    />
+    <p class="lead-text">I've been immersed in JavaScript since 2019</p>
+    <p>
+        This blog is built using
+        <a href="https://deno.land" target="_blank">Deno</a> and
+        <a href="https://lume.land" target="_blank">Lume</a>, and the source
+        code is available at
+        <a href="https://github.com/xam1dullo/blog">Github</a>.
+    </p>
+    <br />
+    <hr />
+    {% if ads.article %} {% include "components/ads/article.njk" %}
+    <hr />
+    {% endif %}
+    <h2 class="mb-4 mt-5">Recent posts</h2>
+    <ul class="list-unstyled">
+        {% for page in search.pages("","date=desc") %} {% if loop.index0 < 20
+        and page.data.title != "Home" %}
+        <li>
+            <article>
+                <h3 class="mb-1 mt-0">
+                    <a href="{{ page.data.url }}">{{ page.data.title }}</a>
+                </h3>
+
+                <p class="text-body-secondary mb-3">
+                    <!-- Author -->
+                    {% if page.data.author %} By
+                    <strong>{{ page.data.author.name }}</strong
+                    >, {% endif %}
+
+                    <!-- Date -->
+                    <time class="mb-1" datetime="{{ page.data.date }}">
+                        {{ page.data.date | date }}
+                    </time>
+
+                    <!-- Reading time -->
+                    <span
+                        >, {{ page.data.readingTime.minutes }} minutes
+                        read</span
+                    >
+                </p>
+                <p class="text-body-secondary mb-5">
+                    {{ page.data.intro }}
+                </p>
+
+                <p></p>
+            </article>
+        </li>
+        {% endif %} {% endfor %}
+    </ul>
+    <hr />
+    {% include "components/ads/plex.njk" %}
+    <br />
+</section>

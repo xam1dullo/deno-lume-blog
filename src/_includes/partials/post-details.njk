@@ -1,0 +1,43 @@
+{% if page.data.header %}
+  <img src="{{ page.data.header }}" class="header-image mb-3">
+{% endif %}
+<a href="{{ page.data.url }}" class="link-secondary"><h1>{{page.data.title}}</h1></a>
+<p>
+
+  <!-- Author -->
+  {% if page.data.author %}
+      by <strong>{{ page.data.author.name }}</strong>, 
+  {% endif %}
+
+  <!-- Date -->
+  <time class="mb-1" datetime="{{ page.data.date }}">
+      {{ page.data.date | date }}
+  </time>
+  
+  <!-- Reading time -->
+  <span class="badge text-bg-info">{{ page.data.readingTime.minutes }} minutes read</span>
+
+  <!-- License -->
+  <!--
+  {% if page.data.license %}
+    <span class="badge text-bg-success">{{ page.data.license }}</span>
+  {% endif %}
+  -->
+  
+  <!-- Tags -->
+  {% for tag in tags %}
+    {% if tag not in ["standalone","index","guide-to-js","post"] %}
+      <span class="badge text-bg-dark">{{tag}}</span>
+    {% endif %}
+  {% endfor %}
+</p>
+{% if page.data.updated %}
+<p>
+  <i>
+    Updated: 
+    <time class="mb-1" datetime="{{ page.data.updated }}">
+      {{ page.data.updated | date }}
+    </time>
+  </i>
+</p>
+{% endif %}

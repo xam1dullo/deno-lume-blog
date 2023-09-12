@@ -1,0 +1,15 @@
+metas:
+    title: "=title"
+    site: Khamidullo's Blog
+    lang: en
+    description: "=description"
+    # image: https://hexagon.56k.guru/img/og_image.webp
+lang: en
+priority: 1.0
+author:
+    name: Khamidullo
+    email: khkhamidullo@gmail.com
+    url: https://khamidullo.deno.dev/
+ads:
+    article: false
+    sidebar: true

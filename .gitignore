@@ -1,0 +1,6 @@
+_site
+_prod
+_bin
+.vscode
+draft
+*.log
