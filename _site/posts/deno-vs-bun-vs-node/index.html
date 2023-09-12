@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+        <!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-873B7M42VH"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-873B7M42VH");
+</script>
+
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark">
+
+        <!-- Dark mode toggler -->
+        <!--
+    <script>
+      const setTheme = (theme) => {
+        if (
+          theme === "auto" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+          document.documentElement.setAttribute("data-bs-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-bs-theme", theme);
+        }
+      };
+      setTheme("auto");
+    </script>
+    -->
+
+        <!-- Halfmoon CSS -->
+        <link href="/css/vendor/halfmoon-2.0.0.min.css" rel="stylesheet">
+
+        <!-- Google ads -->
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9224018205432249" crossorigin="anonymous"></script>
+
+
+        <!-- Specific -->
+        <title>Deno vs. Bun vs. Node.js: A Feature Comparison</title>
+
+        <style>@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github-dark.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css";
+
+.restricted {
+    max-width: 1000px;
+}
+
+article table {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.green {
+    color: #090;
+}
+.red {
+    color: #900;
+}
+
+article table td, article table th {
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+article table tr:first-child, article table tr:first-child {
+    padding-left: 5px;
+}
+
+h1 {
+    margin-top: 0.5rem;
+}
+
+h2,h3 {
+    margin-top: 3rem;
+}
+
+h1,h2,h3 {
+    margin-bottom: 1rem;
+}
+
+.header-image {
+    width: 100%;
+}
+
+.spaced-link {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+h1 { font-size: 1.5rem; font-weight:500; }
+h2 { font-size: 1.3rem; font-weight:500; }
+h3 { font-size: 1.1rem; font-weight:500; }
+h4 { font-size: 1.0rem; font-weight:500; }
+h5 { font-size: 0.9rem; font-weight:500; }
+
+a {
+    text-decoration: none !important;
+}
+
+article li {
+    margin-bottom: 0.25rem;
+}
+
+article ul {
+    margin-bottom: 2rem;
+}
+
+.hljs {
+    border-radius: 3px;
+}
+
+.index-avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: 25px;
+}</style>
+    <meta property="og:type" content="website">
+<meta property="og:site_name" content="Khamidullo's Blog">
+<meta property="og:locale" content="en">
+<meta property="og:title" content="Deno vs. Bun vs. Node.js: A Feature Comparison">
+<meta property="og:description" content="Description">
+<meta property="og:url" content="https://hexagon.56k.guru/posts/deno-vs-bun-vs-node/">
+<meta name="twitter:title" content="Deno vs. Bun vs. Node.js: A Feature Comparison">
+<meta name="twitter:description" content="Description">
+<meta name="twitter:card" content="summary">
+<meta itemprop="name" content="Deno vs. Bun vs. Node.js: A Feature Comparison">
+<meta itemprop="description" content="Description">
+<meta name="description" content="Description">
+</head>
+    <body>
+
+  <nav class="navbar navbar-expand-lg mb-4 border-bottom border-light-subtle">
+  <div class="container restricted">
+    <a class="navbar-brand" href="/">
+      Hexagon's Blog
+    </a>
+    <div id="collapse navbar-collapse">
+      <span>
+        <a class="link-secondary" href="https://hexagon.56k.guru" title="Website"><i class="fas fa-globe me-2"></i></a>
+        <a class="link-secondary" href="https://github.com/hexagon" title="Hexagon at GitHub"><i class="fab fa-github me-2"></i></a>
+        <a class="link-secondary" href="https://github.com/sponsors/hexagon" title="Sponsor Hexagon at GitHub"><i class="fas fa-hand-holding-usd me-2"></i></a>
+        <a class="link-secondary" href="https://hexagon.56k.guru/feed.rss" title="RSS Feed for hexagon.56k.guru"><i class="fas fa-rss me-2"></i></a>
+        <a class="link-secondary" href="https://hexagon.56k.guru/feed.json" title="JSON Feed for hexagon.56k.guru"><i class="fas fa-rss me-2"></i></a>
+      </span>      
+    </div>
+  </div>
+</nav>
+
+
+  <!-- content -->
+  <div class="container restricted">
+    
+<div class="row">
+    <div class="col-md-9">
+        <section>
+            <article lang="">
+                
+<a href="/posts/deno-vs-bun-vs-node/" class="link-secondary"><h1>Deno vs. Bun vs. Node.js: A Feature Comparison</h1></a>
+<p>
+
+  <!-- Author -->
+  
+      by <strong>Khamidullo</strong>, 
+  
+
+  <!-- Date -->
+  <time class="mb-1" datetime="Mon Sep 11 2023 05:00:00 GMT+0500 (Uzbekistan Standard Time)">
+      2023-09-11
+  </time>
+  
+  <!-- Reading time -->
+  <span class="badge text-bg-info">5 minutes read</span>
+
+  <!-- License -->
+  <!--
+  
+    <span class="badge text-bg-success">CC BY-SA 4.0</span>
+  
+  -->
+  
+  <!-- Tags -->
+  
+    
+  
+    
+  
+    
+      <span class="badge text-bg-dark">deno</span>
+    
+  
+    
+      <span class="badge text-bg-dark">bun</span>
+    
+  
+    
+      <span class="badge text-bg-dark">nodejs</span>
+    
+  
+</p>
+
+                <p>Choosing a JavaScript runtime for your project? Then you've probably heard of Deno, Bun, and Node.js. They are all good, but each has its own set of features and trade-offs. This guide will break them down by features, ease of use, security, and other considerations.</p>
+                <br>
+                 
+                <table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Deno</th>
+<th>Bun</th>
+<th>Node.js</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Built-in Code Formatter</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Built-in Linting</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Built-in Upgrader</td>
+<td><i class="green">✅</i></td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Built-in Type Checker</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Built-in Minifier</td>
+<td><i class="red">❌</i></td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Built-in LSP</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Built-in REPL</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="green">✅</i></td>
+</tr>
+<tr>
+<td>Built-in Dependency Viewer</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="green">❌</i></td>
+</tr>
+<tr>
+<td>Built-in Standard Library</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="green">✅</i></td>
+</tr>
+<tr>
+<td>Built-in Websocket Handler</td>
+<td><i class="green">✅</i></td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Built-in Persistent Storage</td>
+<td><i class="green">✅</i></td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Built-in Package Manager</td>
+<td><i class="red">❌</i></td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Built-in Benchmark Runner</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Single Executable Apps</td>
+<td><i class="green">✅</i></td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Secure by Default</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Native TypeScript / TSX</td>
+<td><i class="green">✅</i></td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Compatibility with Web APIs</td>
+<td><i class="green">✅</i></td>
+<td><i class="green">✅</i></td>
+<td><i class="green">✅</i></td>
+</tr>
+<tr>
+<td>Windows Support</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="green">✅</i></td>
+</tr>
+<tr>
+<td>package.json Compatibility</td>
+<td><i class="green">✅</i></td>
+<td><i class="green">✅</i></td>
+<td><i class="green">✅</i></td>
+</tr>
+<tr>
+<td>NPM Opt-out</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Support for URL Imports</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+<tr>
+<td>Support for Import Maps</td>
+<td><i class="green">✅</i></td>
+<td><i class="red">❌</i></td>
+<td><i class="red">❌</i></td>
+</tr>
+</tbody>
+</table>
+<p>As this table doesn't cover every single aspect, here are some noteworthy points:</p>
+<ul>
+<li>Bun has some level of Windows support.</li>
+<li>Node has started to implement a permissions model.</li>
+<li>Node do have an external dependency view through <code>npm list</code>.</li>
+<li>Bun has a semi-built-in REPL, which is downloaded on demand.</li>
+<li>All runtimes offer ARM64 support to varying degrees, with Node.js supporting the broadest range of platforms.</li>
+<li>While Deno lacks a traditional built-in package manager, it does facilitate automatic package installations through URL imports, specifier imports, import_map, and package.json.</li>
+</ul>
+<p>It's also worth noting that Deno has a major release rumored to arrive soon, which could bring some exciting new features.</p>
+<p>Now let's go through them one by one.</p>
+<h2>Deno</h2>
+<p>Deno was initially created by Ryan Dahl, the original creator of Node.js, to address some of the regrets and issues he felt were present in Node.js. It is built on the V8 JavaScript engine and is written in Rust. <a href="https://en.wikipedia.org/wiki/Deno_(software)">(wikipedia)</a>.</p>
+<h3>Features</h3>
+<p>As you can see in the table above, Deno has a very comprehensive set of features compared to the competition. While Node.js has great support for the tried and tested npm package registry, Deno is much more aligned with web APIs and modern standards, and it also supports most npm packages.</p>
+<h3>Ease of Use</h3>
+<p>Deno also offers an excellent developer experience, especially if you use TypeScript, which is supported out of the box. Deno also has the advantage of built-in linting, a code formatter, etc., saving you some configuration and bootstrapping time. If you're inclined towards opinionated settings, just fire up your editor, craft a 'main.ts', and you're good to go.</p>
+<h3>Security</h3>
+<p>Deno is the clear winner here; it's secure by default, meaning everything is blocked by default, and you enable the features you need.</p>
+<h2>Bun</h2>
+<p>Bun is a more recent entry in the JavaScript runtime ecosystem, focused on developer experience, modern JavaScript practices and high performance. It's built on top of JavaScriptCore and Zig. <a href="https://en.wikipedia.org/wiki/Bun_(software)">(wikipedia)</a></p>
+<h3>Features</h3>
+<p>Though Bun might not match Deno's arsenal of built-in tools, it certainly elevates the developer experience (DX) beyond what Node.js offers. As an example, it boasts built-in TypeScript but does not type-check on its own.</p>
+<p>The main selling point of Bun seems to be its performance, they present a lot of benchmarks showing awesome numbers, and the package manager sure is quick. But in real-world applications, especially web applications, the difference might not be that significant.</p>
+<h3>Ease of Use</h3>
+<p>Bun prioritizes simplicity and speed. With its built-in package manager, and improved developer experience compared to Node.js, developers can get started quickly without the initial setup hurdles that other runtimes might impose.</p>
+<h3>Security</h3>
+<p>Bun hasn't implemented a comprehensive permissions model like Deno. However, it does introduce a new interesting package.json feature called <a href="https://bun.sh/docs/cli/install#trusted-dependencies">trustedDependencies</a>.</p>
+<h3>Other Considerations</h3>
+<p>Bun might not offer as comprehensive Windows support as Deno or Node.js, but it does function to some extent.</p>
+<h2>Node.js</h2>
+<p>Node.js, launched in 2009, revolutionized server-side programming by allowing developers to use JavaScript outside the browser. Built on the V8 JavaScript engine. <a href="https://en.wikipedia.org/wiki/Node.js">(wikipedia)</a></p>
+<h3>Features</h3>
+<p>Node.js has been the backbone of server-side JavaScript development for years, but compared to Deno and Bun, it's starting to fall behind in terms of developer experience and progressive technology.</p>
+<h3>Ease of Use</h3>
+<p>Node.js has a steeper learning curve for beginners but offers immense power and flexibility in return. The extensive documentation, tutorials, and community support available make it easier to overcome challenges.</p>
+<h3>Security</h3>
+<p>Historically, Node.js received criticism for its approach to security, especially regarding packages. However, the community and maintainers have significantly improved this area. The permissions model is now being implemented, which might make Node.js more secure in the future.</p>
+<h3>Other Considerations</h3>
+<p>Again, Node.js boasts the advantage of time, maturity, and a vast community. For large-scale applications or projects where library support is essential, Node.js still stands strong.</p>
+<h2>Conclusion</h2>
+<p>Selecting between Deno, Bun, and Node.js largely depends on your project's requirements and your personal preferences.</p>
+<ul>
+<li>If maturity, a vast ecosystem, and community support are your top priorities, Node.js continues to be a formidable contender.</li>
+<li>If you're seeking a modern, secure-by-default runtime with a top-notch developer experience and growing maturity, Deno is the way to go.</li>
+<li>If you want a mix of Node.js and Deno's strengths, with an emphasis on cutting-edge performance, and a decent developer experience, Bun might be your answer.</li>
+</ul>
+<h2>Credits</h2>
+<p>A big thank you to discord users Birk Skyum, lino-levan, Beast, cknight, Mark G and others for invaluable research and discussions contributing to this article.</p>
+<p>Over and out.</p>
+
+            </article>
+        </section>
+        <hr>
+        <!-- Article -->
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9224018205432249" data-ad-slot="5003020095"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                <br>
+                
+    <section>
+    
+    
+    
+    
+    
+    <section>
+
+        <hr>
+         <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-9224018205432249" data-ad-slot="4035826891"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+        <section>
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        var disqus_config = function () {
+            this.page.url = "https://khamidullo.deno.dev/posts/deno-vs-bun-vs-node/"; // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "/posts/deno-vs-bun-vs-node/"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function () {
+            // DON'T EDIT BELOW THIS LINE
+            var d = document,
+                s = d.createElement("script");
+            s.src = "https://hexagons-blog.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    <script id="dsq-count-scr" src="//hexagons-blog.disqus.com/count.js" async=""></script>
+</section>
+
+    </section></section></div>
+
+    <!-- Sidebar -->
+    <div class="col-md-3">
+        <!--<div id="search"></div>--> <!-- Current Series TOC -->
+ <!--Recommended posts -->
+<section class="mb-4">
+    <h4>Recommended posts</h4>
+    <ul class="list-unstyled">
+    
+        <li class="mb-2">
+            <a class="link-primary link-secondary" href="/posts/deno-vs-bun-vs-node/">Deno vs. Bun vs. Node.js: A Feature Comparison</a>
+        </li>
+    
+    </ul>
+</section> <!-- More series -->
+
+<section class="mb-4">
+    <h4>Article series</h4>
+    <ul class="list-unstyled">
+        
+    </ul>
+</section>  <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-9224018205432249" data-ad-slot="4035826891"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+    </div>
+</div>
+
+  </div>
+    
+  <div class="container-fluid footer border-top border-light bg-gradient bg-light">
+    <div class="container restricted">
+        <div class="row">
+            <div class="col-md-6 p-3">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Icons Links -->
+                    <li class="nav-item">
+                        <strong>hexagon.56k.guru</strong>
+                    </li>
+                    <li class="nav-item">
+                        An open-source blog for tech and/or JavaScript enthusiasts
+                    </li>
+                    <li class="nav-item mt-3">
+                        <strong>Licensing</strong>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="link-secondary" target="_blank" title="License for Posts">Posts: <strong>CC BY-SA 4.0</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://opensource.org/licenses/MIT" class="link-secondary" target="_blank" title="License for Code">Site: <strong>MIT</strong></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 p-3 text-right">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Icons Links -->
+                    <li class="nav-item">
+                    <a class="link-secondary" href="https://khamidullo.deno.dev" title="Website"><i class="fas fa-globe me-2"></i> Web: <strong>Khamidullo</strong></a>
+                    </li>
+                    <li class="nav-item mt-1">
+                    <a class="link-secondary" href="https://github.com/xam1dullo" title="Hexagon at GitHub"><i class="fab fa-github me-2"></i> GitHub: <strong>Khamidullo</strong></a>
+                    </li>
+                    <li class="nav-item mt-1">
+                        <a class="link-secondary" href="https://github.com/sponsors/hexagon" title="Sponsor Hexagon at GitHub"><i class="fas fa-hand-holding-usd me-2"></i> GitHub Sponsors: <strong>Hexagon</strong></a>
+                    </li>
+                    <li class="nav-item mt-1">
+                        <i class="fas fa-envelope me-2"></i> Mail: <strong>khkhamidullo(at)gmail(dot)com</strong>
+                    </li>
+                    <li class="nav-item mt-1">
+                        <i class="fas fa-rss me-2"></i> RSS Feed: <strong><a href="https://hexagon.56k.guru/feed.rss" title="RSS Feed - hexagon.56k.guru" class="link-secondary">https://hexagon.56k.guru/feed.rss</a></strong>
+                    </li>
+                    <li class="nav-item mt-1">
+                        <i class="fas fa-rss me-2"></i> JSON Feed: <strong><a href="https://hexagon.56k.guru/feed.json" title="JSON Feed - hexagon.56k.guru" class="link-secondary">https://hexagon.56k.guru/feed.json</a></strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body></html>

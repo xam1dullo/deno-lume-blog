@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
+  <channel>
+    <title/>
+    <link>https://hexagon.56k.guru/</link>
+    <atom:link href="https://hexagon.56k.guru/feed.rss" rel="self" type="application/rss+xml"/>
+    <description/>
+    <lastBuildDate>Tue, 12 Sep 2023 03:16:57 GMT</lastBuildDate>
+    <language>en</language>
+    <generator>Lume v1.18.4</generator>
+    <item>
+      <title>Deno vs. Bun vs. Node.js: A Feature Comparison</title>
+      <link>https://hexagon.56k.guru/posts/deno-vs-bun-vs-node/</link>
+      <guid isPermaLink="false">https://hexagon.56k.guru/posts/deno-vs-bun-vs-node/</guid>
+      <description>Description</description>
+      <content:encoded><![CDATA[Choosing a JavaScript runtime for your project? Then you've probably heard of Deno, Bun, and Node.js. They are all good, but each has its own set of features and trade-offs. This guide will break them down by features, ease of use, security, and other considerations.]]></content:encoded>
+      <pubDate>Mon, 11 Sep 2023 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
